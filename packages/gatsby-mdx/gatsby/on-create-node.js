@@ -52,7 +52,8 @@ module.exports = async (
   const mdxNode = await createMDXNode({
     id: createNodeId(`${node.id} >>> Mdx`),
     node,
-    content
+    content,
+    getNode
   });
 
   createNode(mdxNode);
@@ -125,15 +126,17 @@ class BabelPluginTransformRelativeImports {
       return {
         visitor: {
           StringLiteral({ node }) {
-            let split = node.value.split('!');
+            let split = node.value.split("!");
             const nodePath = split.pop();
-            const loaders = `${split.join('!')}${split.length > 0 ? '!' : ''}`;
+            const loaders = `${split.join("!")}${split.length > 0 ? "!" : ""}`;
             if (nodePath.startsWith(".")) {
               const valueAbsPath = path.resolve(parentFilepath, nodePath);
-              const replacementPath = loaders + path.relative(
-                path.join(cache.directory, MDX_SCOPES_LOCATION),
-                valueAbsPath
-              );
+              const replacementPath =
+                loaders +
+                path.relative(
+                  path.join(cache.directory, MDX_SCOPES_LOCATION),
+                  valueAbsPath
+                );
               node.value = replacementPath;
             }
           }
