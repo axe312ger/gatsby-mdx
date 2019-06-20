@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="0.7.1"></a>
+
+## [0.7.1](https://github.com/axe312ger/gatsby-mdx/compare/@axe312/gatsby-mdx@0.7.0...@axe312/gatsby-mdx@0.7.1) (2019-06-20)
+
+### Bug Fixes
+
+- **webpack:** ensure loader loads forked package ([2c09a2c](https://github.com/axe312ger/gatsby-mdx/commit/2c09a2c))
+
 <a name="0.7.0"></a>
 
 # 0.7.0 (2019-06-20)
