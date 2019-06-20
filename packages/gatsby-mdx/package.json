@@ -1,5 +1,5 @@
 {
-  "name": "gatsby-mdx",
+  "name": "@axe312/gatsby-mdx",
   "version": "0.6.2",
   "description": "mdx integration for gatsby",
   "main": "index.js",
