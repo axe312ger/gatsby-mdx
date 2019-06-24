@@ -1,6 +1,6 @@
 {
   "name": "@axe312/gatsby-mdx",
-  "version": "0.7.1",
+  "version": "0.7.2",
   "description": "mdx integration for gatsby",
   "main": "index.js",
   "license": "MIT",
